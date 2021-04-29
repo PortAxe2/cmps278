@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/itemDetail.js"></script>
+    <link rel="stylesheet" href="../css/itemDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+    <div class="topBar">
+        <a href="./homepage.html"><img class="logo" src="../graphics/Logo.png" alt=""></a>
+        <img class="userImage" src="../graphics/BGC_8868.JPG" alt="">
+        <div class="currencyDIV">
+            <label for="currency">Currency</label>
+            <select class="currencySelect" name="currency" id="currency">
+                <option value="dollar">USD</option>
+                <option value="lira">LBP</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="mainContainer">
+        <div class="item">
+            <img class="itemImageClass" id="itemImage" src="" alt="">
+            <div class="textInfo">
+                <h1 id="itemName"></h1>
+                <span id="star1" class="fa fa-star"></span>
+                <span id="star2" class="fa fa-star"></span>
+                <span id="star3" class="fa fa-star"></span>
+                <span id="star4" class="fa fa-star"></span>
+                <span id="star5" class="fa fa-star"></span>
+                <span>Total reviews:</span>
+                <span id="total-reviews"></span>
+                <p style="font-weight: bold;" id="genre">Genre: </p>
+                <br>
+                <h2>Description</h2>
+                <p id="description"></p>
+                <br>
+                <p id="price"></p>
+                <br>
+                <button id="addWish">Add to wishlist</button>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="movieDiv" style="display: none;">
+                <h1>Trailer</h1><br>
+                <iframe id="trailer" width="894" height="503" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br><br><br>
+            <h1>Reviews</h1><br><br>
+            <div id="reviews">
+                
+                <a href=""><h2>All Reviews</h2></a>
+            </div>
+        </div>
+    </div>
+</body>

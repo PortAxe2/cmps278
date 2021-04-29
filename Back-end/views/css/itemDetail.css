@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+}
+
+.topBar {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(231, 231, 231);
+}
+
+.logo {
+    float: left;
+    margin: 16px;
+    height:  38px;
+}
+
+.userImage {
+    margin: 16px;
+    padding: 0;
+    float: right;
+    height:  38px;
+    border-radius: 50%;
+}
+
+.currencyDIV {
+    float: right;
+    margin: 20px;
+}
+
+.currencySelect {
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------*/
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    border-radius: 10px;
+    padding: 16px;
+    margin: 64px;
+    width: 85vw;
+    height: fit-content;
+    background-color: rgb(240, 240, 240);
+}
+
+.itemImageClass {
+    margin-right: 32px;
+    border-radius: 10px;
+    float: left;
+    height: 500px;
+
+}
+
+.textInfo {
+    margin-left: 350px;
+    padding: 8px;
+}
+
+#price {
+    font-size: 32px;
+}
+
+.checked {
+color: orange;
+}
+
+
+
+#addWish {
+    font-size: 16px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+}
+
+#trailer {
+    margin-top: 32px;
+}
+
+
+
+.review {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: rgba(201, 253, 192, 0.692);
+}
+
+#reviewerIcon {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.reportButton {
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(246, 75, 75);
+}

@@ -1,0 +1,118 @@
+$movieImageSize: 1.0;
+
+*{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.likePressed{
+    color: blue;
+}
+
+.dislikePressed{
+    color: red;
+}
+
+.movieStrip {
+    float: right;
+    padding: 16px;
+    width: 80vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 16px;
+    border-radius: 4px;
+}
+
+.topBar {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(231, 231, 231);
+}
+
+.logo {
+    float: left;
+    margin: 16px;
+    height:  38px;
+}
+
+.userImage {
+    margin: 16px;
+    padding: 0;
+    float: right;
+    height:  38px;
+    border-radius: 50%;
+}
+
+.currencyDIV {
+    float: right;
+    margin: 20px;
+}
+
+.currencySelect {
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+.movie {
+    display: inline-flex;
+    justify-content: center;
+    /*align-items: center;*/
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 520px;
+    overflow: hidden;
+    margin: 4px;
+    border: 3px solid black;
+    background: rgba(255, 255, 255, 0.541);
+    padding: 0;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+    &:hover{
+        transition: 0.3s ease-in;
+        //transform: scale(1.02);
+        .moviePoster{
+            transition: 1s ease-out;
+            //transform: scale(1.02);
+            filter: saturate(1.5);
+        }
+    }
+}
+
+.moviePoster {
+    height: 430px;
+    width: 350px;
+    transition: 0.3s ease-in;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.movieTitle {
+    margin-top: 0;
+    font-size: larger;
+}
+
+#HighR {
+    margin: 8px;
+    padding: 8px;
+    background-color: rgba(255, 127, 80, 0.192);
+    border-radius: 4px;
+}
+
+.movieLink {
+    text-decoration: none;
+    color: black;
+}
+
+.checked {
+    color: orange;
+}

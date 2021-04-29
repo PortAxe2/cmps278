@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+}
+
+.topBar {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(231, 231, 231);
+}
+
+.logo {
+    float: left;
+    margin: 16px;
+    height:  38px;
+}
+
+.userImage {
+    margin: 16px;
+    padding: 0;
+    float: right;
+    height:  38px;
+    border-radius: 50%;
+}
+
+.currencyDIV {
+    float: right;
+    margin: 20px;
+}
+
+.currencySelect {
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.categoriesAvailable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+}
+
+.category {
+    height: 500px;
+    width: 280px;
+    border-radius: 10px;
+    background-color: red;
+    text-align: center;
+    margin: 4px;
+    transition: 0.4s;
+    padding: 16px;
+}
+
+.category-apps {
+    background-size: contain;
+    background: linear-gradient(rgba(251, 0, 0, 0.6), rgba(255, 102, 102, 0.6), url("../graphics/moviesPoster-01.png"));
+}
+
+.category-games {
+    background: linear-gradient(rgba(0, 251, 63, 0.6), rgba(107, 255, 102, 0.6));
+}
+
+.category-movies {
+    background: linear-gradient(rgba(0, 151, 251, 0.6), rgba(102, 207, 255, 0.6));
+}
+
+.category-books {
+    background: linear-gradient(rgba(213, 251, 0, 0.6), rgba(240, 255, 102, 0.6));
+}
+
+.category:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.category h1 {
+    font-size: 32px;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+}
+
+.categoriesAvailable a {
+    text-decoration: none;
+}

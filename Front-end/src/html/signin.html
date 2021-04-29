@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signin.css">
+    <script src="../js/signin.js"></script>
+</head>
+
+<body>
+    <div class="credForm">
+        <form id="signinForm" action="">
+            <label for="">Email</label><br>
+            <input id="email" name="email" class="inputField" type="text" placeholder="example@domain.com">
+            <br><br><br>
+            <label for="">Password</label><br>
+            <input id="password" name="password" class="inputField" type="password" placeholder="*******">
+            <br><br>
+            <input type="checkbox" name="rememberMe" id="rememberMe">
+            <label for="">Remember Me</label>
+        </form>
+        <br>
+        <div class="buttonsDiv">
+            <p style="display: none; color: red;" id="loginError">Email and password combination does not exist.</p>
+            <a href="">Forgot Password</a>
+            <br><br>
+            <input id="loginButton" class="custBtn custBtn-login" type="button" value="LOGIN" form="signinForm">
+            <br>
+            <button id="signoutButton" class="custBtn custBtn-logout">SIGNUP</button>
+        </div>
+    </div>
+</body>
