@@ -27,7 +27,27 @@ const ItemsReviewSchema = mongoose.Schema({
         required: true
     },
 
+    numberOfDisLikes: {
+        type: Number,
+        required: true
+    },
+
     replies: {
+        type: Array,
+        required: false
+    },
+
+    likedby: {
+        type: Array,
+        required: false
+    },
+
+    dislikedby: {
+        type: Array,
+        required: false
+    },
+
+    reports: {
         type: Array,
         required: false
     }

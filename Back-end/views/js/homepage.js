@@ -2,6 +2,9 @@ var userID;
 var ajaxUser = new XMLHttpRequest();
 var ajaxResult;
 
+function $(id){
+    return document.getElementById(id)
+}
 
 window.onload = function() {
     if(localStorage.getItem('userID')){
@@ -11,6 +14,8 @@ window.onload = function() {
         userID = sessionStorage.getItem('userID');
     }
     
+    displayCountry()
+
     if(!userID) {
         window.location.replace("http://localhost:8050/signin");
     }
@@ -29,4 +34,17 @@ window.onload = function() {
     ajaxUser.setRequestHeader('Content-type', 'application/json')
     ajaxUser.send(JSON.stringify(params));
     
+}
+
+function displayCountry(){
+    fetch('https://extreme-ip-lookup.com/json/')
+    .then( res => res.json())
+    .then(response => {
+        var country = response.countryCode
+        country = country.toLowerCase()
+        $('country').innerHTML += `<li><i class="text-center flag-icon flag-icon-${country}"></i></li>`
+    })
+    .catch((data, status) => {
+        console.log('Request failed');
+    })
 }

@@ -1,5 +1,67 @@
-var signinButton;
-var signoutButton;
+function $(id){
+    return document.getElementById(id)
+} 
+
+window.onload = function(){
+    sessionStorage.removeItem('userID')
+    localStorage.removeItem('userID')
+
+    $('errors').style.display = 'none'
+    $('btn').onclick = signin
+}
+
+
+function signin(){
+    $('errors').style.display = 'none'
+    var username = $('username').value
+    var password = $('password').value
+    var remember = $('rememberMe')
+    var credentials = {
+        "username": username,
+        "password": password
+    }
+
+
+    fetch("http://localhost:8050/users/signIn", {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(credentials)
+    })
+        .then(function (response) {
+            if ((response.ok)) {
+                return response.text();
+            }
+        })
+        .then(function (text) {
+            var results = JSON.parse(text);
+            
+            if(results.errors == 'true'){
+                $('errors').style.display = 'block'
+                $('success').style.display = 'none'
+            }
+            else{
+                if(remember.checked == true){
+                    sessionStorage.removeItem('userID');
+                    localStorage.setItem('userID', results.userId);
+                    localStorage.setItem('remember', true);
+                }
+                else{
+                    localStorage.removeItem('userID');
+                    sessionStorage.setItem('userID', results.userId);
+                    localStorage.setItem('remember', false);
+                }
+
+                window.location.replace("http://localhost:8050/homepage");
+            }
+        })
+       
+}
+
+
+
+
+/*var signinButton;
+
 var errorMessage;
 var ajaxUserCheck = new XMLHttpRequest();
 var ajaxResult;
@@ -12,7 +74,7 @@ window.onload = function() {
     localStorage.removeItem('userID');
     errorMessage = document.getElementById('loginError');
     signinButton = document.getElementById('loginButton');
-    signoutButton= document.getElementById('signoutButton');
+    var signupButton= document.getElementById('signupButton');
     if (incorrectInfo == true) {
         errorMessage.style.display = 'block';
     }
@@ -63,3 +125,4 @@ function signIn() {
     ajaxUserCheck.setRequestHeader('Content-type', 'application/json')
     ajaxUserCheck.send(JSON.stringify(credentials));
 }
+*/

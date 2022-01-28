@@ -1,113 +1,152 @@
-*{
-    margin: 0;
-}
-
-.topBar {
-    width: 100vw;
-    height: 70px;
-    background-color: rgb(231, 231, 231);
-}
-
-.logo {
-    float: left;
-    margin: 16px;
-    height:  38px;
-}
-
-.userImage {
-    margin: 16px;
-    padding: 0;
-    float: right;
-    height:  38px;
-    border-radius: 50%;
-}
-
-.currencyDIV {
-    float: right;
-    margin: 20px;
-}
-
-.currencySelect {
-    width: 90px;
-    height: 30px;
-    border-radius: 5px;
+* {
+  margin: 0;
 }
 
 /*--------------------------------------------------*/
 
 .mainContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
 }
 
 .item {
-    border-radius: 10px;
-    padding: 16px;
-    margin: 64px;
-    width: 85vw;
-    height: fit-content;
-    background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 64px;
+  width: 85vw;
+  height: fit-content;
+  background-color: #edeaf1;
+}
+
+#itemDetails {
+  display: flex;
 }
 
 .itemImageClass {
-    margin-right: 32px;
-    border-radius: 10px;
-    float: left;
-    height: 500px;
+  margin-right: 32px;
+  border-radius: 10px;
+  width: 350px;
+  height: 500px;
+}
 
+#images {
+  float: left;
+  width: 350px;
 }
 
 .textInfo {
-    margin-left: 350px;
-    padding: 8px;
+  margin-left: 20px;
+  padding: 8px;
+  float: left;
 }
 
 #price {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .checked {
-color: orange;
+  color: orange;
 }
 
+.wish {
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+}
 
-
-#addWish {
-    font-size: 16px;
-    border-radius: 5px;
-    width: 150px;
-    height: 40px;
-    background-color: yellowgreen;
-    color: white;
-    border: none;
+.wish:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 #trailer {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
-
-
 .review {
-    margin-top: 16px;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: rgba(201, 253, 192, 0.692);
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: rgba(201, 253, 192, 0.692);
 }
 
 #reviewerIcon {
-    width: 50px;
-    border-radius: 50%;
+  width: 50px;
+  border-radius: 50%;
 }
 
-.reportButton {
-    font-size: 16px;
-    font-weight: bold;
-    width: 150px;
-    height: 50px;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(246, 75, 75);
+.fa-thumbs-up:hover {
+  color: blue;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.fa-thumbs-down:hover {
+  color: red;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.commentId,
+.index {
+  display: none;
+}
+
+.fa {
+  margin-top: 0;
+}
+
+#altImgs {
+  overflow: auto;
+  white-space: nowrap;
+  width: 350px;
+  display: none;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.altImgs {
+  height: 175px;
+}
+
+#movieDiv {
+  display: none;
+}
+
+#similar {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.similar {
+  height: 250px;
+  margin-right: 10px;
+  width: 175px;
+}
+
+#commentSubmit {
+  border-radius: 25px;
+}
+
+#commentBtn {
+  border-radius: 25px;
+}
+
+#AllReviews {
+  display: inline-block;
+  color: rgb(0, 132, 255);
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+#AllReviews:hover {
+  text-decoration: none;
+  color: rgb(233, 25, 25);
+}
+
+p {
+  margin-top: 0;
 }

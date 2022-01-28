@@ -1,0 +1,55 @@
+.wishImg {
+  width: 50px;
+  height: 50px;
+}
+
+.img-fluid {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.btn-remove {
+  /*display: fit-content;*/
+  margin: auto;
+  margin-left: 40%;
+  float: right;
+}
+
+.list-group-item-secondary {
+  background-color: #edeaf1;
+  border-radius: 20px;
+}
+
+.fa-cart-plus,
+.fa-clock-o,
+.fa-user {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+#uploadImg {
+  visibility: hidden;
+}
+
+#passChange {
+  display: none;
+}
+
+#myImg {
+  height: 150px;
+  width: 150px;
+}

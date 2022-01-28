@@ -4,6 +4,9 @@ var ajaxTopMovies = new XMLHttpRequest();
 var ajaxResult;
 var ajaxMovies;
 
+function $(id){
+    return document.getElementById(id)
+}
 
 window.onload = function() {
     if(localStorage.getItem('userID')){
@@ -16,6 +19,8 @@ window.onload = function() {
     if(!userID) {
         window.location.replace("http://localhost:8050/signin");
     }
+
+    displayCountry()
 
     var params = {
         _id: userID
@@ -68,7 +73,7 @@ function getTopMovies() {
                     eval(`star${j}`).className += " checked";
                 }
                 
-                newTopMovie = `<a class="movieLink" href="/items/itemDetail?itemID=${ajaxTopMoviesSorted[i]._id}">
+                newTopMovie = `<a class="movieLink" href="/items/itemDetail?reviews=five&itemID=${ajaxTopMoviesSorted[i]._id}">
                                    <div class="movie">
                                         <div class="moviePoster" style="background-image: url(${ajaxTopMoviesSorted[i].itemImageURL})"></div>
                                         <h2 class="movieTitle">${ajaxTopMoviesSorted[i].itemName}</h2>
@@ -91,7 +96,7 @@ function getTopMovies() {
                 for (j = 1 ; j <= parseInt(ajaxNewMoviesSorted[i].averageRating) ; j++) {
                     eval(`star${j}`).className += " checked";
                 }
-                newNewMovie = `<a class="movieLink" href="/items/itemDetail?itemID=${ajaxNewMoviesSorted[i]._id}">
+                newNewMovie = `<a class="movieLink" href="/items/itemDetail?reviews=five&itemID=${ajaxNewMoviesSorted[i]._id}">
                     <div class="movie">
                         <div class="moviePoster" style="background-image: url(${ajaxNewMoviesSorted[i].itemImageURL})"></div>
                         <h2 class="movieTitle">${ajaxNewMoviesSorted[i].itemName}</h2>
@@ -106,9 +111,15 @@ function getTopMovies() {
                     </div>
                 </a>
                 `;
+
+
                 document.getElementById('topMovies').innerHTML += newTopMovie;
                 document.getElementById('newMovies').innerHTML += newNewMovie;
+              
             }
+
+
+            
         }
     };
     ajaxTopMovies.open("GET", "http://localhost:8050/items/getType/Movie", true);
@@ -137,3 +148,18 @@ function currencyConvert() {
         console.log(price);
     }
 }
+
+
+function displayCountry(){
+    fetch('https://extreme-ip-lookup.com/json/')
+    .then( res => res.json())
+    .then(response => {
+        var country = response.countryCode
+        country = country.toLowerCase()
+        $('country').innerHTML += `<li><i class="text-center flag-icon flag-icon-${country}"></i></li>`
+    })
+    .catch((data, status) => {
+        console.log('Request failed');
+    })
+}
+

@@ -1,0 +1,39 @@
+#h4,
+#h41 {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+ul {
+  margin: 0;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5px; /* Footer height */
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+hr.hline {
+  border-color: orangered;
+  border-width: 2px;
+}
+
+.list-unstyled {
+  color: rgb(0, 132, 255);
+}
+
+#country {
+  font-size: 75px;
+}

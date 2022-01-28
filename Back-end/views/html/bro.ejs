@@ -1,0 +1,30 @@
+<% for(var i=0; i< items.length; i++){  %>
+    <% var star1 = document.createElement('span');   %>
+    <% var star2 = document.createElement('span');   %>
+    <% var star3 = document.createElement('span');   %>
+    <% var star4 = document.createElement('span');   %>
+    <% var star5 = document.createElement('span');   %>
+    <% star1.className = "fa fa-star";   %>
+    <% star2.className = "fa fa-star";   %>
+    <% star3.className = "fa fa-star";   %>
+    <% star4.className = "fa fa-star";   %>
+    <% star5.className = "fa fa-star";   %>
+    <% for (var j = 1 ; j <= parseInt(items[i].averageRating) ; j++) {   %>
+        <%    eval('star' + [j]).className += " checked";  %>
+        <%}  %>
+
+    <a class="movieLink" href="/items/itemDetail?reviews=five&itemID=<%=items[i]._id%>">
+    <div style="background-color: white;" class="movie">
+         <div class="moviePoster" style="background-image: url( <%=items[i].itemImageURL%> )"></div>
+         <h2 class="movieTitle"><% items[i].itemName  %></h2>
+         <div class="break"></div>
+         <% star1.outerHTML %>
+         <% star2.outerHTML %>
+         <% star3.outerHTML %>
+         <% star4.outerHTML %>
+         <% star5.outerHTML %>
+         <div class="break"></div>
+         <p class="price"><% items[i].itemPrice != 0 ? "$" + (items[i].itemPrice).toString() : "FREE" %></p>
+     </div>   
+ </a>
+}

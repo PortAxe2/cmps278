@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/movies.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="../js/movies.js"></script>
 </head>
 
 <header>
     <div class="topBar">
         <a href="http://localhost:8050/homepage"><img class="logo" src="../graphics/Logo.png" alt=""></a>
-        <img id="userImg" class="userImage" src="" alt="">
+        <a href="http://localhost:8050/users/profile"><img id="userImg" class="userImage" src="" alt=""></a>
         <div class="currencyDIV">
             <label for="currency">Currency</label>
             <select class="currencySelect" name="currency" id="currency">
@@ -30,4 +34,46 @@
     <div id="topMovies" class="movieStrip">
         <h1 id="HighR">Highest Rated</h1>
     </div>
+
+
+
+    
+    <br>
+
+    <footer id="footer" class="page-footer dark">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <div class="single_footer_part">
+                        <br><br><h4 id="h4" class="text-center">Terms of Service</h4>
+                        <hr class="hline">
+                        <ul class="list-unstyled">
+                            <li>Male</li>
+                            <li><a href="/categories/?name=&price_min=&price_max=&category=women">Female</a></li>
+                            <li><a href="/categories/?name=shoes&price_min=&price_max=&category=">Shoes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="single_footer_part">
+                        <br><br><h4  id="h41" class="text-center">About PlayStore</h4>
+                        <hr class="hline">
+                        <ul class="list-unstyled">
+                            <li>You can view apps, games, movies and books using the Play Store website.</li> 
+                            <li>The website allows you to view your favorite content at any time and incase you enjoy more than one item you can always add them to your wishlist to view at any time.</li>   
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="single_footer_part">
+                       <br><br><br><br>
+                        <ul id='country' class='text-center list-unstyled'></ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <br><br>
+    </footer>
+    
 </body>
