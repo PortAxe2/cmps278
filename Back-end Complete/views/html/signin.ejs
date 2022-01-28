@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signup.css">
+    <script src="../js/signin.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    
+
+   <div id='form'>
+       <h2 style="color: #19aa8d;">Log In</h2>
+       <h6>Please fill in the required information to log in</h6>
+       <hr class="hline"> 
+       <form action="">
+
+        <div class="alert alert-danger" id="errors">
+              Incorrect Input
+        </div>
+
+
+        <% if(typeof success == 'undefined'){ %>
+                
+            <% } else{ %>  
+              <div class="alert alert-success" id="success">
+                 <%=success[0].msg%>
+              </div>
+           <% } %>   
+        
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class='fa fa-lg fa-user'></i></span>
+                <input type="text" class="form-control" required name="username" id="username" placeholder="Username"  value="<%= typeof username != 'undefined' ? username : '' %>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class='fa fa-lg fa-lock'></i></span>
+                <input type="password" class="form-control" required name="password" id="password" placeholder="Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+			<label class="checkbox-inline green"><input type="checkbox" id="rememberMe">Remember Me</label>
+		</div>
+
+        <div class="text-center">
+            <input type="button" value="Log In" id="btn" class="btn  btn-lg">
+        </div>
+        
+        <hr class="hline"> 
+
+        <div class="text-center">
+            <small><a class="green" href="http://localhost:8050/users/forgotpassword">Forgot Password?</a></small><br>
+            <small>Don't have an account? <a class="green" href="http://localhost:8050/signup">Sign Up</a></small>
+        </div>
+        
+        </form>
+   </div>
+   
+</body>

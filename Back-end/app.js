@@ -6,7 +6,6 @@ const ItemsReviews  = require('./routes/itemsReviewRoute');
 const Items = require('./routes/itemsRoute');
 const Users = require('./routes/usersRoute');
 const Homepage = require('./routes/homepageRoute');
-
 require('dotenv/config');
 
 
@@ -19,7 +18,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-
 app.get('/', (req,res) => {
     res.redirect('/signin');
 });
@@ -28,27 +26,18 @@ app.get('/signin', (req,res) => {
     res.render('signin');
 });
 
-app.get('/signup', async (req,res) => {
-    res.render('signup')
+app.get('/homepage/movies', (req,res) => {
+    res.render('movies');
 });
-
-app.get('/homepage/:item', (req,res) => {
-    res.render('items');
-});
-
-
 
 app.use('/items', Items);
 app.use('/itemsReview', ItemsReviews);
 app.use('/users', Users);
 app.use('/homepage', Homepage);
 
-app.use(express.static(__dirname + '/public'));
-app.use('/uploads', express.static('uploads'));
-
 mongoose.connect(
     process.env.DB_CONNECTION,
-    {useNewUrlParser: true, useUnifiedTopology : true},
+    {useNewUrlParser: true},
     () => console.log('Connected')
 );
 

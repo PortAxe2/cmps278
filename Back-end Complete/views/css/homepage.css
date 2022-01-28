@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+}
+
+#body {
+  background-color: white;
+}
+
+.categoriesAvailable {
+  text-align: center;
+}
+
+.category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 500px;
+  width: 80vw;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 8px;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.category h1 {
+  font-size: 32px;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 32px;
+  border-radius: 8px;
+  color: white;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.category:hover {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+}
+
+.category:hover h1 {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  background-color: black;
+}
+
+.category-apps {
+  background-size: cover;
+  background: url("https://imgur.com/kKJrU67.jpg"),
+    -webkit-gradient(linear, left top, left bottom, from(#eb01a5), to(#d13531));
+  background: url("https://imgur.com/kKJrU67.jpg"),
+    linear-gradient(#eb01a5, #d13531);
+  /* W3C */
+}
+
+.category-games {
+  background-size: cover;
+  background: url("https://imgur.com/2pR5tiA.jpg"),
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0, 251, 63, 0.6)), to(rgba(107, 255, 102, 0.6)));
+  background: url("https://imgur.com/2pR5tiA.jpg"),
+    linear-gradient(rgba(0, 251, 63, 0.6), rgba(107, 255, 102, 0.6));
+}
+
+.category-movies {
+  background-size: cover;
+  background: url("https://i.imgur.com/A3CVoiO.jpg"),
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0, 151, 251, 0.6)), to(rgba(102, 207, 255, 0.6)));
+  background: url("https://i.imgur.com/A3CVoiO.jpg"),
+    linear-gradient(rgba(0, 151, 251, 0.6), rgba(102, 207, 255, 0.6));
+
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+
+.category-books {
+  background-size: cover;
+  background: url("https://imgur.com/BcBfvcY.jpg"),
+    -webkit-gradient(linear, left top, left bottom, from(rgba(213, 251, 0, 0.6)), to(rgba(240, 255, 102, 0.6)));
+  background: url("https://imgur.com/BcBfvcY.jpg"),
+    linear-gradient(rgba(213, 251, 0, 0.6), rgba(240, 255, 102, 0.6));
+}
+
+.category:hover {
+  height: 550px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.categoriesAvailable a {
+  text-decoration: none;
+}
+
+.child {
+  width: fit-content; /* Can be in percentage also. */
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+/*# sourceMappingURL=homepage.css.map */

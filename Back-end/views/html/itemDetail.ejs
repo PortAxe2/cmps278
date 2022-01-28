@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 
 <head>
-    <title id="title"></title>
+    <title>Detail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <script src="../js/itemDetail.js"></script>
     <link rel="stylesheet" href="../css/itemDetail.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 </head>
 
 <header>
     <div class="topBar">
         <a href="http://localhost:8050/homepage"><img class="logo" src="../graphics/Logo.png" alt=""></a>
-        <a href="http://localhost:8050/users/profile"><img id="userImg" class="userImage" src="" alt=""></a>
-        
-        <div id="Menu">
-            <a href="http://localhost:8050/homepage/applications">Applications</a>
-            <a href="http://localhost:8050/homepage/games">Games</a>
-            <a href="http://localhost:8050/homepage/movies">Movies</a>
-            <a href="http://localhost:8050/homepage/books">Books</a>
-        </div>
-
-        <form id="searchForm" action="http://localhost:8050/items/searchBar" method="POST">
-                <select name="itemType" id="itemType">
-                    <option value="all">All</option>
-                    <option value="App">Apps</option>
-                    <option value="Game">Games</option>
-                    <option value="Movie">Movies</option>
-                    <option value="Book">Books</option>
-                </select>
-                <input id="search_input" type="text" name="description" placeholder="Search...">
-                <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        
+        <img id="userImg" class="userImage" src="" alt="">
         <div class="currencyDIV">
             <label for="currency">Currency</label>
             <select class="currencySelect" name="currency" id="currency">
@@ -45,19 +20,14 @@
                 <option value="lira">LBP</option>
             </select>
         </div>
-    </div>    
+    </div>
 </header>
 
 <body>
     
     <div class="mainContainer">
         <div class="item">
-            <div id="itemDetails">
-                <div id="images">
-                    <img class="itemImageClass" id="itemImage" src="" alt="">
-                    <div id="altImgs"></div>
-                </div>
-            
+            <img class="itemImageClass" id="itemImage" src="" alt="">
             <div class="textInfo">
                 <h1 id="itemName"></h1>
                 <span id="star1" class="fa fa-star"></span>
@@ -68,31 +38,18 @@
                 <span>Total reviews:</span>
                 <span id="total-reviews"></span>
                 <p style="font-weight: bold;" id="genre">Genre: </p>
-                <p style="font-weight: bold;" id="cast">Cast: </p>
-                <p style="font-weight: bold;" id="credit">Credit: </p>
                 <br>
                 <h2>Description</h2>
                 <p id="description"></p>
                 <br>
                 <p id="price"></p>
                 <br>
-                <button class="wish btn btn-outline-success" id="addWish">Add to wishlist</button>
-                <button class="wish btn btn-outline-danger" id="removeWish" >Remove from wishlist</button>
-                &nbsp;
-                <p class="text-success" style="display: none;" id="wishAdded">Added!</p>
-                <p class="text-danger" style="display: none;" id="wishAlreadyAdded">Removed from Wishlist</p><br><br><br><br>
+                <button id="addWish">Add to wishlist</button>
+                <p style="color: green; display: none;" id="wishAdded">Added!</p>
+                <p style="color: red; display: none;" id="wishAlreadyAdded">Already Exists</p>
             </div>
-        </div>
-            
-            <br><br><br><br>
-            
-            <div id="similar">
-                <h1>Similar Items</h1><br>
-                
-            </div>
-
-            <br><br><br><br>
-            <div id="movieDiv">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="movieDiv" style="display: none;">
                 <h1>Trailer</h1><br>
                 <iframe id="trailer" width="100%" height="503" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -104,53 +61,11 @@
                 <input style="display: none;" name="itemID"  id="itemID" type="text">
                 <input style="display: none;" name="username" id="username" type="text">
                 <input style="display: none;" name="picture" id="picture" type="text">
-                <h3>Leave a comment</h3>
                 <textarea name="commentSubmit" required id="commentSubmit" cols="80" rows="10"></textarea><br>
-                <input id="commentBtn" type="submit" class="btn btn-outline-info" value="Post Comment">
+                <input type="submit" value="Submit Comment">
             </form>
             <br><br>
-            <a id="AllReviews" href=""><h2>All Reviews</h2></a>
+            <a href=""><h2>All Reviews</h2></a>
         </div>
     </div>
-
-
-
-    <br>
-
-    <footer id="footer" class="page-footer dark">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-4">
-                    <div class="single_footer_part">
-                        <br><br><h4 id="h4" class="text-center">Terms of Service</h4>
-                        <hr class="hline">
-                        <ul class="list-unstyled">
-                            <li>You are responsible for your use of the Services and for any Content you provide, including compliance with applicable laws, rules, and regulations. You should only provide Content that you are comfortable sharing with others.</li>  
-                            <li>  Any use or reliance on any Content or materials posted via the Services or obtained by you through the Services is at your own risk. We do not endorse, support, represent or guarantee the completeness, truthfulness, accuracy, or reliability of any Content or communications posted via the Services or endorse any opinions expressed via the Services. 
-                            </li>
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="single_footer_part">
-                        <br><br><h4  id="h41" class="text-center">About PlayStore</h4>
-                        <hr class="hline">
-                        <ul class="list-unstyled">
-                            <li>You can view apps, games, movies and books using the Play Store website.</li> 
-                            <li>The website allows you to view your favorite content at any time and incase you enjoy more than one item you can always add them to your wishlist to view at any time.</li>   
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="single_footer_part">
-                       <br><br><br><br>
-                        <ul id='country' class='text-center list-unstyled'></ul>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <br><br>
-    </footer>
 </body>

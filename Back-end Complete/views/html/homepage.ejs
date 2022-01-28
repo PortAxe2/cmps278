@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/homepage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<header>
+    <div class="topBar">
+        <a href="http://localhost:8050/homepage"><img class="logo" src="../graphics/Logo.png" alt=""></a>
+        <a href="http://localhost:8050/users/profile"><img id="userImg" class="userImage" src="" alt=""></a>
+        
+        <div id="Menu">
+            <a href="http://localhost:8050/homepage/applications">Applications</a>
+            <a href="http://localhost:8050/homepage/games">Games</a>
+            <a href="http://localhost:8050/homepage/movies">Movies</a>
+            <a href="http://localhost:8050/homepage/books">Books</a>
+        </div>
+
+        <form id="searchForm" action="http://localhost:8050/items/searchBar" method="POST">
+                <select name="itemType" id="itemType">
+                    <option value="all">All</option>
+                    <option value="App">Apps</option>
+                    <option value="Game">Games</option>
+                    <option value="Movie">Movies</option>
+                    <option value="Book">Books</option>
+                </select>
+                <input id="search_input" type="text" name="description" placeholder="Search...">
+                <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        
+        <div class="currencyDIV">
+            <label for="currency">Currency</label>
+            <select class="currencySelect" name="currency" id="currency">
+                <option value="dollar">USD</option>
+                <option value="lira">LBP</option>
+            </select>
+        </div>
+    </div>    
+</header>
+
+<body id="body">
+
+
+    <div class="categoriesAvailable">
+
+        <div class="child">
+        <a href="http://localhost:8050/homepage/applications">
+            <div class="category category-apps">
+                <h1>APPLICATIONS</h1>
+            </div>
+        </a>
+    </div>
+
+    <div class="child">
+        <a href="http://localhost:8050/homepage/games">
+            <div class="category category-games">
+                <h1>GAMES</h1>
+            </div>
+        </a>
+    </div>
+
+        <div class="child">
+        <a href="http://localhost:8050/homepage/movies">
+            <div class="category category-movies">
+                <h1>MOVIES</h1>
+            </div>
+        </a>
+    </div>
+
+        <div class="child">
+        <a href="http://localhost:8050/homepage/books">
+            <div class="category category-books">
+                <h1>BOOKS</h1>
+            </div>
+        </a>
+        </div>
+    </div>
+
+    <br>
+    
+    <footer id="footer" class="page-footer dark">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <div class="single_footer_part">
+                        <br><br><h4 id="h4" class="text-center">Terms of Service</h4>
+                        <hr class="hline">
+                        <ul class="list-unstyled">
+                            <li>You are responsible for your use of the Services and for any Content you provide, including compliance with applicable laws, rules, and regulations. You should only provide Content that you are comfortable sharing with others.</li>  
+                            <li>  Any use or reliance on any Content or materials posted via the Services or obtained by you through the Services is at your own risk. We do not endorse, support, represent or guarantee the completeness, truthfulness, accuracy, or reliability of any Content or communications posted via the Services or endorse any opinions expressed via the Services. 
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="single_footer_part">
+                        <br><br><h4  id="h41" class="text-center">About PlayStore</h4>
+                        <hr class="hline">
+                        <ul class="list-unstyled">
+                            <li>You can view apps, games, movies and books using the Play Store website.</li> 
+                            <li>The website allows you to view your favorite content at any time and incase you enjoy more than one item you can always add them to your wishlist to view at any time.</li>   
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="single_footer_part">
+                       <br><br><br><br>
+                        <ul id='country' class='text-center list-unstyled'></ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <br><br>
+    </footer>
+</body>

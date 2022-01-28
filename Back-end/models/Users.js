@@ -27,11 +27,6 @@ const UserSchema = mongoose.Schema({
         required: true
     },
 
-    lastVisited: {
-        type: Array,
-        required: true
-    }
-
 });
 
 module.exports = mongoose.model('Users', UserSchema);

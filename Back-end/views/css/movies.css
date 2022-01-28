@@ -12,8 +12,9 @@
 }
 
 .movieStrip {
+  float: right;
   padding: 16px;
-  width: 100%;
+  width: 80vw;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -22,17 +23,48 @@
   border-radius: 4px;
 }
 
+.topBar {
+  width: 100vw;
+  height: 70px;
+  background-color: #e7e7e7;
+}
+
+.logo {
+  float: left;
+  margin: 16px;
+  height: 38px;
+}
+
+.userImage {
+  margin: 16px;
+  padding: 0;
+  float: right;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.currencyDIV {
+  float: right;
+  margin: 20px;
+}
+
+.currencySelect {
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+}
+
 .movie {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /*align-items: center;*/
   overflow: hidden;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 300px;
   height: 520px;
   overflow: hidden;
@@ -54,7 +86,7 @@
   -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
   -webkit-filter: saturate(1.5);
-  filter: saturate(1.5);
+          filter: saturate(1.5);
 }
 
 .moviePoster {
@@ -68,7 +100,7 @@
 
 .break {
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+      flex-basis: 100%;
   height: 0;
 }
 
@@ -80,7 +112,7 @@
 #HighR {
   margin: 8px;
   padding: 8px;
-
+  background-color: rgba(255, 127, 80, 0.192);
   border-radius: 4px;
 }
 
